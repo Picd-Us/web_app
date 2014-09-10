@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'users/new'
+  root 'users#new'
 
   match '/signup', to: 'users#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
