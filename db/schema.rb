@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910015900) do
+ActiveRecord::Schema.define(version: 20140913185438) do
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20140910015900) do
   create_table "users", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "user_name"
     t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
