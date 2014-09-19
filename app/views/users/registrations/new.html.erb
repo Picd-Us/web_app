@@ -6,6 +6,19 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
+  <div>
+    <!-- This part of the form is for the Person model which means that this is a person not an admin or business -->
+    <%= field_for :person do |p| %>
+        <%= p.label :first_name, "First Name" %>
+        <%= p.text_field :first_name %>
+
+        <%= p.label :last_name, "Last Name" %>
+        <%= p.text_field :last_name %>
+
+        <!-- Need to add fields for birthday? Do they need to be a certain age? -->
+    <% end %>
+  </div>
+
   <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
