@@ -8,13 +8,16 @@
 
   <div>
     <!-- This part of the form is for the Person model which means that this is a person not an admin or business -->
-    <%= field_for :person do |p| %>
-        <%= p.label :first_name, "First Name" %>
-        <%= p.text_field :first_name %>
+    <%= fields_for :person do |p| %>
+        <div>
+          <%= p.label :first_name, "First Name" %><br />
+          <%= p.text_field :first_name %>
+        </div>
 
-        <%= p.label :last_name, "Last Name" %>
-        <%= p.text_field :last_name %>
-
+        <div>
+          <%= p.label :last_name, "Last Name" %><br />
+          <%= p.text_field :last_name %>
+        </div>
         <!-- Need to add fields for birthday? Do they need to be a certain age? -->
     <% end %>
   </div>
