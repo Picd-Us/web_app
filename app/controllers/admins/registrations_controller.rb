@@ -10,7 +10,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
 
 	def create
 		super do |resource|
-			p = sign_in_params
+			p = sign_up_params
 			unless p[:first_name].nil?
 				resource.update first_name: p[:first_name].downcase
 			end
@@ -19,13 +19,16 @@ class Admins::RegistrationsController < Devise::RegistrationsController
 			end
 			unless p[:position].nil?
 				resource.update position: p[:position]
+			end
+			unless p[:phone_number].nil?
+				resource.update phone_number: p[:phone_number]
 			end
 		end
 	end
 
 	def update
 		super do |resource|
-			p = sign_in_params
+			p = account_update_params
 			unless p[:first_name].nil?
 				resource.update first_name: p[:first_name].downcase
 			end
@@ -35,16 +38,19 @@ class Admins::RegistrationsController < Devise::RegistrationsController
 			unless p[:position].nil?
 				resource.update position: p[:position]
 			end
+			unless p[:phone_number].nil?
+				resource.update phone_number: p[:phone_number]
+			end
 		end
 	end
 
 	private
 
-	def sign_in_params
-		params.require(:brand).permit(:email, :first_name, :last_name, :position, :password, :password_confirmation)
+	def sign_up_params
+		params.require(:admin).permit(:email, :first_name, :last_name, :position, :phone_number, :password, :password_confirmation)
 	end
 
 	def account_update_params
-		params.require(:brand).permit(:email, :first_name, :last_name, :position, :password, :password_confirmation)
+		params.require(:admin).permit(:email, :first_name, :last_name, :position, :phone_number, :password, :password_confirmation)
 	end
 end

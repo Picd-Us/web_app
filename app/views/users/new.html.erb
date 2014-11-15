@@ -1,7 +1,17 @@
 <h1>Users#new</h1>
 <li>
-	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-	<%= link_to('Update', edit_user_registration_path) %>
+	<%- if !current_user.nil? %>
+		<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+		<%= link_to('Update', edit_user_registration_path) %>
+	<% end -%>
+	<%- if !current_admin.nil? %>
+		<%= link_to('Logout', destroy_admin_session_path, method: :delete) %>
+		<%= link_to('Update', edit_admin_registration_path) %>
+	<% end -%>
+	<%- if !current_brand.nil? %>
+		<%= link_to('Logout', destroy_brand_session_path, method: :delete) %>
+		<%= link_to('Update', edit_brand_registration_path) %>
+	<% end -%>
 </li>
 
 <p>Find me in app/views/users/new.html.erb</p>

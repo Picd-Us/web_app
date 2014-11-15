@@ -1,5 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
+	
+
 	def create
 		super do |resource|
 			p = sign_up_params
