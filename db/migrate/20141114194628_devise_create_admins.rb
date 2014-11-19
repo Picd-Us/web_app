@@ -1,6 +1,5 @@
 class DeviseCreateAdmins < ActiveRecord::Migration
   def change
-    drop_table :admins
     create_table(:admins) do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""

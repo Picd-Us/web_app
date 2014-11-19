@@ -1,6 +1,5 @@
 class DeviseCreateBrands < ActiveRecord::Migration
   def change
-    drop_table :brands
     create_table(:brands) do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""

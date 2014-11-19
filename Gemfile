@@ -48,4 +48,6 @@ gem 'jruby-openssl'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'sqlite3'
+
 
