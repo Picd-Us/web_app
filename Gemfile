@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 source 'https://rubygems.org'
 
 
@@ -49,5 +50,3 @@ gem 'jruby-openssl', platforms: [:jruby]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-

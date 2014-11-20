@@ -2,11 +2,26 @@
 <html>
 <head>
   <title>PicdUs</title>
+  <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>    
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    
 </head>
-<body>
+<body id="body">
+    <div id="app_top_nav_wrapper">
+        <div id="logo_top">
+            <%= image_tag "mark-web-transparent.png" %>
+    </div>
+        <div id="app_top_nav"> 
+            <div id="log_top"></div>
+            <ul>
+                <li>Contact Us</li>
+            </ul>
+        
+        </div>
+    
+    </div>
 
 <%= yield %>
 
