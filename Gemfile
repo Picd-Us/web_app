@@ -6,6 +6,7 @@ gem 'rails', '4.1.5'
 # Use jdbcsqlite3 as the database for Active Record
 group :development, :test do 
 	gem 'activerecord-jdbcsqlite3-adapter'
+	gem 'sqlite3', platforms: [:mingw, :mswin, :x64_mingw]
 	gem 'rspec-rails', '2.13.1'
 end
 
@@ -15,6 +16,7 @@ end
 
 group :production do 
 	gem 'activerecord-jdbcmysql-adapter'
+	gem 'mysql', platforms: [:mingw, :mswin, :x64_mingw]
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -38,7 +40,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby, :x64_mingw]
 # authentication
 gem 'devise'
 
-gem 'jruby-openssl'
+gem 'jruby-openssl', platforms: [:jruby]
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
