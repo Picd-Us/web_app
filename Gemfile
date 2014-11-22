@@ -6,7 +6,7 @@ gem 'rails', '4.1.5'
 # Use jdbcsqlite3 as the database for Active Record
 group :development, :test do 
 	gem 'activerecord-jdbcsqlite3-adapter'
-	gem 'sqlite3', platforms: [:mingw, :mswin, :x64_mingw]
+#	gem 'sqlite3', platforms: [:mingw, :mswin, :x64_mingw]
 	gem 'rspec-rails', '2.13.1'
 end
 
@@ -22,6 +22,8 @@ end
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
+gem 'sqlite3'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -40,7 +42,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby, :x64_mingw]
 # authentication
 gem 'devise'
 
-gem 'jruby-openssl', platforms: [:jruby]
+gem 'jruby-openssl'
+
+#gem 'jruby-openssl', platforms: [:jruby]
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

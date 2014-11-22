@@ -4,5 +4,36 @@
 #login_wrapper {
     width: 400px;
     background-color: #00ddff;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 25px;
+    position: relative;
+    
+    h2{
+        margin-left: calc(50% - 1.5em);
+    }
+    
+    #login-email, 
+    #login-password, 
+    #login-remember {
+        margin-left: 29%;
+        
+        label {
+            margin-left: 5px;
+        }
+        
+    }
+    
+    #login-submit {
+        margin-left: 29%;   
+    }
+    
+    #forgot-password, 
+    #sign-up {
+        margin-left: 29%;    
+    }
+    
+    
+    
     
 }
