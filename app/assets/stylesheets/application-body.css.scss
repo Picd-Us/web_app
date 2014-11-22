@@ -1,8 +1,8 @@
-#body {
-    margin: 0px;
-    width: auto;
-    height: auto;
-    background-color: #fff; 
+#body, html {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; 
     font-family: 'Comfortaa', cursive;
     color: #fff;
 }
@@ -20,28 +20,36 @@ a:hover {
     }
 
 #site-wrapper {
-    margin:inherit;
-    width: inherit;
-    height: inherit;
-    background-image: url("<%=  app/assets/images/ 'background-image.jpeg' %>")
+    float: left;
+//    margin:;
+    width: 100%;
+    height: 100%;
+    background-image: image-url('background-image1.jpeg');
+    
+    
+    
+    
 }
 
 #app_top_nav_wrapper {
-    width: inherit;
+    width: 100%;
     height: 50px;
     background-color: #333;
 }
 
 #logo_top img{
     background-color: transparent;
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: 27px;
+    margin-top: 12px;
+    margin-left: 5px;
     float: left;
 }
 
 #app_top_nav {
+    position: relative;
     float: right;
-    height: inherit;
+    height: 50px;
     width: auto;
     font-size: 13px;
     margin-right: 10px;

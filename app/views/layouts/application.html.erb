@@ -12,7 +12,7 @@
     <div id="site-wrapper">
     <div id="app_top_nav_wrapper">
         <div id="logo_top">
-            <a href="/"><%= image_tag "mark-web-transparent.png" %></a>
+            <a href="/"><%= image_tag "logo-web-transparent.png" %></a>
         </div>
         <div id="app_top_nav"> 
             <div id="log_top"></div>
@@ -25,6 +25,7 @@
     </div>
 
 <%= yield %>
+    <%= render "devise/shared/footer" %>    
     </div>
 </body>
 </html>
