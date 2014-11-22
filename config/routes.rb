@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :brands, controllers: { registrations: "brands/registrations" }
   devise_for :admins, controllers: { registrations: "admins/registrations" }
   devise_for :users, controllers: { registrations: "users/registrations" }
-  root 'users#new'
+  root 'dashboards#new'
 
   match '/signup', to: 'users#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
