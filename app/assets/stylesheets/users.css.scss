@@ -3,41 +3,60 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #login_wrapper {
     width: 400px;
-    background-color: #00ddff;
+    background-color: rgba(0,221,255, .75);
     margin-left: calc(50% - 200px);
     margin-top: 200px;
     border-radius: 25px;
     
     
+    
+    
     h2{
         margin-left: calc(50% - 1.5em);
     }
-    
+}
     #login-email, 
     #login-password, 
     #login-remember {
-        margin-left: calc(50% - 86.5px);
+        width: 254px;
+        margin-left: calc(50% - 127px);
         
         label {
-            margin-left: 5px;
+            margin-left: 5px!important;
+        }
             
-            input {
-                border-radius: 5px;
+            #user_email, #user_password {
+                width: 254px!important;
+                border-radius: 25px!important;
+                height: 20px;
+                
+                &:focus {
+                    outline-width: thin; 
+                    outline-color: #ffb100;
+                    outline-style: none;
+                }
             }
         }
+    
         
-    }
-    
-    #login-submit {
-        margin-left: 29%;   
-    }
-    
-    #forgot-password, 
-    #sign-up {
-        margin-left: 29%;    
-    }
+        
     
     
-    
-    
+#login-submit {
+     margin-left: 29%;
+        
 }
+    
+#forgot-password {
+    margin-left: 27%;
+    padding: 0px 0px 0px 2px;    
+}
+    
+#sign-up {        
+    padding: 0px 0px 0px 54px;
+    margin-left: 29%;    
+}
+    
+    
+    
+    
