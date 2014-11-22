@@ -3,16 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #login_wrapper {
     width: 400px;
-    background-color: rgba(0,221,255, .75);
+    background-color: rgba(0, 221, 255, 0.85);
     margin-left: calc(50% - 200px);
     margin-top: 200px;
     border-radius: 25px;
+    padding-top: 10px;
+    box-shadow: 0px 2px 5px #333;
+    
+    //Background gradient 
+    
+    background: -moz-linear-gradient(45deg,rgba(0, 221, 255, 0.85) 0%, rgba(107, 235, 255, .85) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0, 221, 255, 0.85)), color-stop(85%,rgba(107, 235, 255, .85))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235, 255, .85) 85%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235, 255, .85) 85%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235, 255, .85) 85%); /* IE10+ */
     
     
-    
-    
-    h2{
+    h2 {
         margin-left: calc(50% - 1.5em);
+        top: 10px;
     }
 }
     #login-email, 
@@ -20,6 +29,7 @@
     #login-remember {
         width: 254px;
         margin-left: calc(50% - 127px);
+        padding-bottom: 13px;
         
         label {
             margin-left: 5px!important;
@@ -29,11 +39,18 @@
                 width: 254px!important;
                 border-radius: 25px!important;
                 height: 20px;
+                padding-left: 10px;
+                font-size: 18px;
+                font-family: 'Comfortaa', cursive;
+                
+                
                 
                 &:focus {
                     outline-width: thin; 
                     outline-color: #ffb100;
                     outline-style: none;
+                    box-shadow: 0px 0px 1px #ffb100 inset;
+                   
                 }
             }
         }
@@ -48,13 +65,43 @@
 }
     
 #forgot-password {
-    margin-left: 27%;
-    padding: 0px 0px 0px 2px;    
+    width: 198px;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 15px;
+    right: -24px;
+    border-width: thin;
+    border: 1px #ffb100;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #444;
+    margin-left: 23%;
+    padding: 5px 0px 0px 15px; 
+    &:hover {
+        background-color: #333;
+        color: #ffb100;
+    }
+      
 }
     
-#sign-up {        
-    padding: 0px 0px 0px 54px;
-    margin-left: 29%;    
+#sign-up {       
+    width: 73px;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 0px;
+    right: -24px;
+    border-width: thin;
+    border: 1px #ffb100;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #444;
+    padding: 4px 0px 0px 16px;
+    margin-left: 38%;
+    &:hover {
+        background-color: #333;
+        color: #ffb100;
+    }
+    
 }
     
     
