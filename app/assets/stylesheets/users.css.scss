@@ -1,11 +1,11 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#login_wrapper {
+.login_wrapper {
     width: 400px;
     background-color: rgba(0, 221, 255, 0.85);
     margin-left: calc(50% - 200px);
-    margin-top: 200px;
+    margin-top: 200px;   
     border-radius: 25px;
     padding-top: 10px;
     box-shadow: 0px 2px 5px #333;
@@ -35,7 +35,8 @@ background: -ms-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235,
             margin-left: 5px!important;
         }
             
-            #user_email, #user_password {
+            #user_email, 
+            #user_password {
                 width: 254px!important;
                 border-radius: 8px!important;
                 height: 20px;
@@ -59,7 +60,7 @@ background: -ms-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235,
         
     
     
-#login-submit {
+.submit {
      margin-left: 29%;
         
 }
@@ -84,7 +85,7 @@ background: -ms-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235,
       
 }
     
-#sign-up {       
+#sign-up, #log-in {       
     width: 73px;
     height: 25px;
     padding-top: 5px;
@@ -103,6 +104,40 @@ background: -ms-linear-gradient(45deg, rgba(0, 221, 255, 0.85) 0%,rgba(107, 235,
     }
     
 }
+
+
+
+
+.text-input {
+    width: 254px;
+        margin-left: calc(50% - 127px);
+        padding-bottom: 13px;
+        
+        label {
+            margin-left: 5px!important;
+        }
+            
+            input {
+                width: 254px!important;
+                border-radius: 8px!important;
+                height: 20px;
+                padding-left: 10px;
+                font-size: 18px;
+                font-family: 'Comfortaa', cursive;
+                
+                
+                
+                &:focus {
+                    outline-width: thin; 
+                    outline-color: #ffb100;
+                    outline-style: none;
+                    box-shadow: 0px 0px 1px #ffb100 inset;
+                   
+                }
+            }
+        }
+
+
     
     
     
