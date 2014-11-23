@@ -1,0 +1,144 @@
+
+/* COLORS
+----------------------------------------------------------------------------- */
+
+/* body background colors */
+
+
+$color_placeholder: 			#ccc;
+
+$color_muted:					#8b8988;
+
+// Message colors
+$color_messageAlert:			#daa549;
+$color_messageError:			#ac342f; // 172, 52, 47
+$color_messageSuccess:			#2b7d53;
+
+/* FAC-specific styles */
+$color_fac_light:               #ebebeb;
+$color_fac_light_form:          #d7d7d7;
+$color_fac_red:                 #eb0029;
+$color_fac_red_hover:           #af111c;
+$color_fac_gray:                #464646;
+$color_fac_med_gray:            #959595;
+$color_fac_light_gray:          #7d7d7d;
+$color_fac_lighter_gray:        #cbcbcb;
+$color_fac_dark:                #252525;
+$color_fac_darker:              #111;
+
+$color_fac_temp_add: 			$color_messageSuccess;
+$color_fac_temp_add_bg: 		#cdf2c1;
+$color_fac_temp_edit: 			$color_messageAlert;
+$color_fac_temp_edit_bg: 		#f2efc1;
+$color_fac_temp_delete: 		$color-messageError;
+$color_fac_temp_delete_bg: 		#f2d3c1;
+
+
+/* BREAKPOINTS
+----------------------------------------------------------------------------- */
+
+$breakpoint-context:          16px; // Redefine just in case the user's browser's default font size is not 16px
+$breakpoint-mobile-small:     ems(480px, $breakpoint-context); // max
+$breakpoint-mobile:           ems(640px, $breakpoint-context); // max
+$breakpoint-tablet-small:     ems(764px, $breakpoint-context); // max
+$breakpoint-tablet:           ems(958px, $breakpoint-context); // max
+$breakpoint-desktop-small:    ems(1206px, $breakpoint-context); // max
+$breakpoint-desktop:          ems(1207px, $breakpoint-context); // min
+
+
+/* VIEWPORTS
+----------------------------------------------------------------------------- */
+$viewport-width-min: 320px;
+$viewport-width-max: 1024px;
+
+
+/* TYPOGRAPHY
+----------------------------------------------------------------------------- */
+
+/* primary font(s) used */
+$typo_standard-body-font: 'Comfortaa', cursive;
+
+/* FAC-specific styles */
+
+$typo_standard-body-font-size: 16px;
+
+
+/* DIMENSIONS
+----------------------------------------------------------------------------- */
+
+/* to be used for padding around elements (e.g. main content area) */
+$dim_standard-margin: 30px;
+$dim_standard-margin-mobile: 20px;
+
+/* standard outer with of main content area */
+$dim_grid_width: 980px;
+$dim_grid_width_padded: $dim_grid_width - ($dim_standard-margin * 2);
+
+$dim_grid_width_tablet: 943px;
+$dim_grid_width_tablet_padded: $dim_grid_width_tablet - ($dim_standard-margin * 2);
+
+/* fac grid */
+$dim_fac_grid_width: 960px;
+$dim_fac_content_aside: 240px;
+$dim_fac_standard_margin: 40px;
+
+$dim_fac_result: 180px;
+$dim_fac_result_med: 120px;
+$dim_fac_result_sm: 90px;
+$dim_fac_result_padding: 24px;
+
+/* fac images */
+$dim_fac_img_lg: 230px;
+$dim_fac_img_med: 200px;
+$dim_fac_img_sm: 57px;
+$dim_fac_border_lg: 10px;
+$dim_fac_border_med: 10px;
+
+/* standard left column width */
+$dim_sidebar_width: 200px;
+
+/* standard right column width */
+$dim_main_section_width: 690px;
+
+/* how much to indent each nav level */
+$dim_nav-sidebar: 14px;
+
+/* e.g. 12, 24, 48, meh */
+$dim_icon_base: 12px;
+
+/* half-size for retina size */
+$dim_sprite_bgsize: 500px 500px;
+
+/* correspond to .masthead-overflow */
+$dim_masthead-overflow-width: 1210px;
+$dim_masthead-overflow-height: 620px;
+
+/* border size for mastheads that are bounded */
+$dim_masthead-bounded-border-size: 12px;
+
+/* width of an asset when the masthead has the side nav layout */
+$dim_masthead-bounded-sidenav-asset-width: 645px;
+
+/* width of the nav when the masthead has the side nav layout */
+$dim_masthead-bounded-sidenav-nav-width: 305px;
+
+/* correspond to .masthead-bounded */
+$dim_masthead-bounded-width: ($dim_grid_width - ($dim_masthead-bounded-border-size * 2));
+$dim_masthead-bounded-height: 440px; /* total height, less border thickness */
+
+$dim_input-padding: 6px;
+
+/* header */
+$header-height: 75px;
+$header-height-mobile: 33px;
+
+/* Viewport widths */
+// $max-width-viewport-mobile: 480px;
+// $min-width-viewport-mobile: 320px;
+// $min-width-viewport-tablet: 768px;
+
+/* Mobile */
+$dim_container-mobile: 294px;
+
+
+

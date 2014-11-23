@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
 #body {
     margin: 0px;
     width: auto;
@@ -22,26 +23,9 @@
     color: #000;
     
 }
+=======
+>>>>>>> 15fdc7cd27f337f48e29dd0d9735c84bcfcb2807
 
-#app_top_nav_wrapper {
-    width: inherit;
-    height: 50px;
-    background-color: #333;
-}
-
-#logo_top img{
-    background-color: transparent;
-    width: 45px;
-    height: 45px;
-    float: left;
-}
-
-#app_top_nav {
-    float: right;
-    height: inherit;
-    width: 20%;
-    font-size: 13px;
-}
 
 
 

@@ -1,0 +1,197 @@
+/**
+ * @mixin breakpoint
+ * @param $breakpoint desktop|tablet|mobile
+ * @include breakpoint(tablet);
+ */
+@mixin breakpoint($breakpoint)
+{
+	@if $breakpoint == desktop {
+		@media only screen and (min-width: $breakpoint-desktop)
+		{
+			@content;
+		}
+	}
+
+	@else if $breakpoint == 'desktop-small' {
+		@media only screen and (max-width: $breakpoint-desktop-small)
+		{
+			@content;
+		}
+	}
+
+	@else if $breakpoint == tablet {
+		@media only screen and (max-width: $breakpoint-tablet)
+		{
+			@content;
+		}
+	}
+
+	@else if $breakpoint == 'tablet-small' {
+		@media only screen and (max-width: $breakpoint-tablet-small)
+		{
+			@content;
+		}
+	}
+
+	@else if $breakpoint == mobile {
+		@media only screen and (max-width: $breakpoint-mobile)
+		{
+			@content;
+		}
+	}
+
+	@else if $breakpoint == 'mobile-small' {
+		@media only screen and (max-width: $breakpoint-mobile-small)
+		{
+			@content;
+		}
+	}
+}
+
+/**
+ * @mixin resolution
+ * @param $ratio -webkit-min-device-pixel-ratio
+ * @param $resolution min-resolution dpi
+ * @include resolution(2, 192);
+ */
+@mixin resolution($ratio: 2, $resolution: 192)
+{
+	@media (-webkit-min-device-pixel-ratio: $ratio), (min-resolution: $resolution + dpi)
+	{
+		@content;
+	}
+}
+
+/**
+ * @mixin rem
+ * @param $property css property
+ * @param $px-values trbl|tb rl|t rl b|t r b l
+ * @include rem(margin, 10px 20px 30px 40px);
+ */
+@mixin rem($property, $px-values)
+{
+	$baseline-rem: $base-font-size / 1rem;
+
+	#{$property}: $px-values;
+
+	@if type-of($px-values) == "number" {
+		#{$property}: $px-values / $baseline-rem;
+	}
+	@else {
+		$rem-values: unquote("");
+		@each $value in $px-values {
+			@if $value == 0 {
+				$rem-values: append($rem-values, $value);
+			}
+			@else {
+				$rem-values: append($rem-values, $value / $baseline-rem);
+			}
+		}
+
+		#{$property}: $rem-values;
+	}
+}
+
+@mixin arrow($size: 5px, $color: #fff, $direction: "up") {
+	content: "";
+	display: block;
+	height: 0;
+	position: absolute;
+	width: 0;
+
+	@if $direction == "up" {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+	}
+
+	@if $direction == "down" {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+	}
+
+	@if $direction == "left" {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+	}
+
+	@if $direction == "right" {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+	}
+}
+
+@mixin border-radius($topleft: 5px, $topright: 5px, $botright: 5px, $botleft: 5px) {
+	-webkit-border-radius: $topleft $topright $botright $botleft;
+	-moz-border-radius: $topleft $topright $botright $botleft;
+	-pie-border-radius: $topleft $topright $botright $botleft;
+	border-radius: $topleft $topright $botright $botleft;
+}
+
+@mixin box-shadow($args: 0 0 3px #222) {
+	-webkit-box-shadow: $args;
+	-moz-box-shadow: $args;
+	-pie-box-shadow: $args;
+	box-shadow: $args;
+}
+
+@mixin noselect() {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@mixin opacity($percent: 50%){
+	-moz-opacity: ($percent / 100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=${percent})";
+	opacity: ($percent / 100);
+}
+
+@mixin opaque-background($rgba: rgba(0, 0, 0, .8), $solid_fallback: #111) {
+	-pie-background-color: $rgba;
+	background-color: $solid_fallback;
+	background-color: $rgba;
+}
+
+@mixin pseudo-element($display: "inline-block") {
+	content: "";
+	display: $display;
+	height: 0;
+	width: 0;
+}
+
+@mixin text-shadow($args: 0 0 1px rgba(0, 0, 0, .75)) {
+	-webkit-text-shadow: $args;
+	text-shadow: $args;
+}
+
+@mixin top-down-gradient($topcolor: rgba(0, 0, 0, 0), $botcolor: rgba(0, 0, 0, .25), $toppercent: 0%, $botpercent: 100%) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from($topcolor), to($botcolor));
+	background-image: -webkit-linear-gradient(top, $topcolor $toppercent, $botcolor $botpercent);
+	background-image: linear-gradient(top, $topcolor $toppercent, $botcolor $botpercent);
+	background-image: -pie-linear-gradient(top, $topcolor $toppercent, $botcolor $botpercent);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='$topcolor', endColorStr='$botcolor', GradientType=0); /*IE7-*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='$topcolor', endColorStr='$botcolor', GradientType=0)"; /*IE8+*/
+}
+
+@mixin transition($transition: color .25s linear) {
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transition-none() {
+	-webkit-transition: none;
+	   -moz-transition: none;
+		 -o-transition: none;
+			transition: none;
+}
+
+@mixin box-sizing($value) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+			box-sizing: $value;
+}

@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PicdUs</title>
+  <title>Picd.Us</title>
   <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>    
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-    
+  <%= favicon_link_tag 'favicon.ico' %>   
 </head>
 <body id="body">
-    <div id="app_top_nav_wrapper">
-        <div id="logo_top">
-            <%= image_tag "mark-web-transparent.png" %>
-    </div>
-        <div id="app_top_nav"> 
-            <div id="log_top"></div>
-            <ul>
-                <li>Contact Us</li>
-            </ul>
+    <div id="site-wrapper">
+        <div id="app_top_nav_wrapper">
+            <div id="logo_top">
+                <a href="/"><%= image_tag "logo-web-transparent.png" %></a>
+            </div>
+            <div id="app_top_nav"> 
+                <div id="log_top"></div>
+                <ul>
+                    <li><a href="/">Contact Us</a></li>
+                </ul>
         
-        </div>
+            </div>
     
-    </div>
+        </div>
 
 <%= yield %>
-
+    <%= render "devise/shared/footer" %>    
+    </div>
 </body>
 </html>
